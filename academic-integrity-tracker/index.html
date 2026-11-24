@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff Login | Academic Integrity Portal</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="login card">
+      <h2>Academic Integrity Portal</h2>
+      <p>Disciplinary Committee &amp; Staff Access</p>
+
+      <form action="dashboard.html">
+        <label for="staff-id">Staff / Employee ID</label>
+        <input type="text" id="staff-id" value="LPU-OFF-104" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" value="Password123" required />
+
+        <label for="role">Select Your Role</label>
+        <select id="role">
+          <option>Investigating Officer</option>
+          <option>Disciplinary Committee Member</option>
+          <option>System Administrator</option>
+        </select>
+
+        <button type="submit" class="btn">Login to Dashboard</button>
+      </form>
+
+      <br />
+      <small>Restricted to authorized university staff only.</small>
+    </div>
+  </body>
+</html>

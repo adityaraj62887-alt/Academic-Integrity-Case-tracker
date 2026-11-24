@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Cases | Academic Integrity Tracker</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <strong>LPU Integrity Cell</strong>
+      <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="all-cases.html" class="active">All Cases</a>
+        <a href="register-case.html">Register Case</a>
+        <a href="index.html">Logout</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>All Cases</h2>
+      <p>Complete record of reported academic misconduct cases.</p>
+      <br />
+
+      <!-- search and filter -->
+      <div class="card row">
+        <div>
+          <label for="search">Search</label>
+          <input
+            type="text"
+            id="search"
+            placeholder="Student ID, Case ID or Course"
+          />
+        </div>
+        <div>
+          <label for="status">Filter by Status</label>
+          <select id="status">
+            <option>All Statuses</option>
+            <option>Under Review</option>
+            <option>Hearing Scheduled</option>
+            <option>Resolved</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- all cases table -->
+      <div class="card">
+        <div class="between">
+          <h3>Registered Cases (4)</h3>
+          <a href="register-case.html" class="btn small">+ Register New Case</a>
+        </div>
+
+        <table>
+          <tr>
+            <th>Case ID</th>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Officer</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>CAS-2026-081</td>
+            <td>Aditya Sharma<br /><small>12304912</small></td>
+            <td>CSE316: Operating Systems</td>
+            <td>Dr. R. Sharma</td>
+            <td><span class="badge amber">Hearing Scheduled</span></td>
+            <td><a href="case-details.html">Open</a></td>
+          </tr>
+          <tr>
+            <td>CAS-2026-080</td>
+            <td>Rohan Patel<br /><small>12301988</small></td>
+            <td>INT219: Web Development</td>
+            <td>Prof. K. Verma</td>
+            <td><span class="badge blue">Under Review</span></td>
+            <td><a href="case-details.html">Open</a></td>
+          </tr>
+          <tr>
+            <td>CAS-2026-079</td>
+            <td>Simran Kaur<br /><small>12306541</small></td>
+            <td>CSE205: Data Structures</td>
+            <td>Dr. R. Sharma</td>
+            <td><span class="badge green">Resolved (Sanctioned)</span></td>
+            <td><a href="case-details.html">Open</a></td>
+          </tr>
+          <tr>
+            <td>CAS-2026-078</td>
+            <td>Aman Kumar<br /><small>12309812</small></td>
+            <td>ECE213: Digital Electronics</td>
+            <td>Dr. A. Singh</td>
+            <td><span class="badge green">Resolved (Exonerated)</span></td>
+            <td><a href="case-details.html">Open</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

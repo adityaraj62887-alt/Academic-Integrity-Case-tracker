@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Case | Academic Integrity Tracker</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <strong>LPU Integrity Cell</strong>
+      <div class="links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="all-cases.html">All Cases</a>
+        <a href="register-case.html" class="active">Register Case</a>
+        <a href="index.html">Logout</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>Register New Case</h2>
+      <p>Record the allegation, student details and evidence.</p>
+      <br />
+
+      <form action="all-cases.html">
+        <!-- case details -->
+        <div class="card">
+          <h3>1. Case Details</h3>
+          <div class="row">
+            <div>
+              <label for="case-id">Case ID (auto-generated)</label>
+              <input type="text" id="case-id" value="CAS-2026-084" readonly />
+            </div>
+            <div>
+              <label for="officer">Assigned Officer</label>
+              <select id="officer">
+                <option>Dr. R. Sharma</option>
+                <option>Prof. K. Verma</option>
+                <option>Dr. A. Singh</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="date">Date &amp; Time of Incident</label>
+              <input type="datetime-local" id="date" required />
+            </div>
+            <div>
+              <label for="reporter">Reporting Invigilator</label>
+              <input
+                type="text"
+                id="reporter"
+                placeholder="e.g. Prof. M. K. Nair"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- student details -->
+        <div class="card">
+          <h3>2. Student &amp; Course</h3>
+          <div class="row">
+            <div>
+              <label for="name">Student Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="e.g. Aryan Kumar"
+                required
+              />
+            </div>
+            <div>
+              <label for="roll">Roll Number</label>
+              <input
+                type="text"
+                id="roll"
+                placeholder="e.g. 12304912"
+                pattern="[0-9]{8,10}"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="course">Course</label>
+              <input
+                type="text"
+                id="course"
+                placeholder="e.g. CSE316: Operating Systems"
+                required
+              />
+            </div>
+            <div>
+              <label for="term">Program &amp; Term</label>
+              <input
+                type="text"
+                id="term"
+                placeholder="B.Tech CSE - 1st Year"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- misconduct and evidence -->
+        <div class="card">
+          <h3>3. Misconduct &amp; Evidence</h3>
+
+          <label for="category">Violation Category</label>
+          <select id="category" required>
+            <option value="">Choose category</option>
+            <option>Plagiarism (Code Similarity)</option>
+            <option>Unauthorized Materials in Exam</option>
+            <option>Proxy Submission / Impersonation</option>
+            <option>Unauthorized Peer Collaboration</option>
+          </select>
+
+          <label for="details">What the invigilator observed</label>
+          <textarea
+            id="details"
+            rows="4"
+            placeholder="Describe what happened..."
+            required
+          ></textarea>
+
+          <label for="evidence">Evidence Link</label>
+          <input
+            type="url"
+            id="evidence"
+            placeholder="https://drive.google.com/..."
+          />
+          <small>Link to similarity report, paper scan or code diff.</small>
+        </div>
+
+        <a href="dashboard.html" class="btn btn-outline">Cancel</a>
+        <button type="submit" class="btn">Submit Case</button>
+      </form>
+    </div>
+  </body>
+</html>

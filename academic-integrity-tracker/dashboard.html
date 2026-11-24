@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Academic Integrity Tracker</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <strong>LPU Integrity Cell</strong>
+      <div class="links">
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="all-cases.html">All Cases</a>
+        <a href="register-case.html">Register Case</a>
+        <a href="index.html">Logout</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>Academic Integrity Case Management</h2>
+      <p>Record-keeping portal for academic misconduct files.</p>
+      <br />
+
+      <!-- three summary cards -->
+      <div class="row">
+        <a href="all-cases.html" class="card">
+          <small>Active Investigations</small>
+          <span class="number">14</span>
+          <small>Cases under review</small>
+        </a>
+        <a href="all-cases.html" class="card">
+          <small>Pending Hearings</small>
+          <span class="number">3</span>
+          <small>Scheduled this week</small>
+        </a>
+        <a href="all-cases.html" class="card">
+          <small>Resolved Cases</small>
+          <span class="number">25</span>
+          <small>Decisions filed</small>
+        </a>
+      </div>
+
+      <!-- recent cases table -->
+      <div class="card">
+        <div class="between">
+          <h3>Recent Cases</h3>
+          <a href="register-case.html" class="btn small">+ Register New Case</a>
+        </div>
+
+        <table>
+          <tr>
+            <th>Case ID</th>
+            <th>Student ID</th>
+            <th>Course</th>
+            <th>Officer</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>CAS-2026-081</td>
+            <td>12304912</td>
+            <td>CSE316</td>
+            <td>Dr. R. Sharma</td>
+            <td><span class="badge amber">Hearing Scheduled</span></td>
+            <td><a href="case-details.html">Open</a></td>
+          </tr>
+          <tr>
+            <td>CAS-2026-080</td>
+            <td>12301988</td>
+            <td>INT219</td>
+            <td>Prof. K. Verma</td>
+            <td><span class="badge blue">Under Review</span></td>
+            <td><a href="case-details.html">Open</a></td>
+          </tr>
+          <tr>
+            <td>CAS-2026-079</td>
+            <td>12306541</td>
+            <td>CSE205</td>
+            <td>Dr. R. Sharma</td>
+            <td><span class="badge green">Resolved</span></td>
+            <td><a href="case-details.html">Open</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
